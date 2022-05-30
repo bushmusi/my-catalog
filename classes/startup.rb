@@ -12,7 +12,7 @@ class Startup
     gets.chomp
   end
 
-  loop do
+  def selection
     case options_list
     when '1'
       booklist
@@ -31,5 +31,10 @@ class Startup
     else
       puts 'Invalid input. Try again'
     end
+    selection
+  end
+
+  def start
+    selection
   end
 end
