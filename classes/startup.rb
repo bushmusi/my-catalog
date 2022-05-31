@@ -12,6 +12,7 @@ class Startup
     gets.chomp
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
   def selection
     case options_list
     when '1'
@@ -33,6 +34,8 @@ class Startup
     end
     selection
   end
+
+  # rubocop:enable Metrics/CyclomaticComplexity
 
   def start
     selection
