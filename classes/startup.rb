@@ -8,17 +8,16 @@ class Startup
     5. Add a music
     6. Add a game
     7. Exit"
-    gets.chomp
+    choice = gets.chomp
+    selection(choice.to_i)
   end
 
-  def selection
-    puts methods[options_list.to_i]
+  def selection(choice)
     methods = [
       method(:booklist), method(:musiclist), method(:gamelist),
       method(:create_book), method(:create_music), method(:create_game), method(:quite_app)
     ]
-    (1..7).include?(options_list.to_i) && methods[options_list.to_i - 1].call
-    selection
+    (1..7).include?(choice) && methods[choice - 1].call
   end
 
   def booklist
@@ -51,6 +50,6 @@ class Startup
   end
 
   def start
-    selection
+    options_list
   end
 end
