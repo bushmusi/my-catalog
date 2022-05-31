@@ -1,7 +1,6 @@
 class Startup
   def options_list
-    puts ''
-    puts "Please choose an option by selecting a number:
+    puts "\nPlease choose an option by selecting a number:
     1. List all books
     2. List all musics
     3. List of games
@@ -12,30 +11,44 @@ class Startup
     gets.chomp
   end
 
-  # rubocop:disable Metrics/CyclomaticComplexity
   def selection
-    case options_list
-    when '1'
-      booklist
-    when '2'
-      musiclist
-    when '3'
-      gamelist
-    when '4'
-      create_book
-    when '5'
-      create_music
-    when '6'
-      create_game
-    when '7'
-      exit
-    else
-      puts 'Invalid input. Try again'
-    end
+    puts methods[options_list.to_i]
+    methods = [
+      method(:booklist), method(:musiclist), method(:gamelist),
+      method(:create_book), method(:create_music), method(:create_game), method(:quite_app)
+    ]
+    (1..7).include?(options_list.to_i) && methods[options_list.to_i - 1].call
     selection
   end
 
-  # rubocop:enable Metrics/CyclomaticComplexity
+  def booklist
+    puts 'book list in library'
+  end
+
+  def musiclist
+    puts 'Music list in library'
+  end
+
+  def gamelist
+    puts 'Game list in library'
+  end
+
+  def create_book
+    puts 'create book'
+  end
+
+  def create_music
+    puts 'create music'
+  end
+
+  def create_game
+    puts 'create game'
+  end
+
+  def quite_app
+    puts 'Thanks for using our app'
+    exit
+  end
 
   def start
     selection
