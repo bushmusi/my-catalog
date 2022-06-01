@@ -1,3 +1,5 @@
+require_relative 'game_actions'
+
 class Startup
   def options_list
     puts "\nPlease choose an option by selecting a number:
@@ -41,7 +43,9 @@ class Startup
   end
 
   def create_game
-    puts 'create game'
+    # puts 'create game'
+    game_actions = GameActions.new
+    game_actions.add_a_game
   end
 
   def quite_app

@@ -1,9 +1,11 @@
 class Item
-  def initialize(publish_date, archived: false)
-    @id = Random.rand(1..10_000)
+  # rubocop:disable Style/OptionalBooleanParameter
+  def initialize(publish_date, archived = false, _id = Random.rand(1..10_000))
+    # @id = Random.rand(1..10_000)
     @publish_date = publish_date
     @archived = archived
   end
+  # rubocop:enable Style/OptionalBooleanParameter
 
   attr_accessor :publish_date, :archived
   attr_reader :author, :genre, :source, :label, :id
