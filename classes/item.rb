@@ -1,14 +1,16 @@
 require 'date'
+require_relative './classes/book-store/label'
 
 class Item
+  attr_accessor :publish_date, :archived, :id
+  attr_reader :author, :genre, :source, :label
+
   def initialize(publish_date, archived: false)
     @id = Random.rand(1..10_000)
     @publish_date = publish_date
     @archived = archived
+    @label = nil
   end
-
-  attr_accessor :publish_date, :archived, :id
-  attr_reader :author, :genre, :source, :label
 
   def genre=(genre)
     @genre = genre
@@ -25,9 +27,15 @@ class Item
     @source.items.push(self) unless @source.items.include?(self)
   end
 
-  def label=(label)
-    @label = label
-    @label.items.push(self) unless @label.items.include?(self)
+  def add_label(label)
+    label.is_a?(Label) && @label.nil? && (
+      @label = label
+      label.add_item(self)
+    )
+    puts 'There is already a label. You can\'t change it' unless @label.nil?
+    return if label.is_a?(Label)
+
+    puts 'Wrong parameter. This method only accepts instances of the Label class'
   end
 
   def can_be_archived?
