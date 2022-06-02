@@ -93,9 +93,9 @@ class GameActions
     data = []
     @games.each do |game|
       data.push({ id: game.id,
-        multiplayer: game.multiplayer,
-        last_played_at: game.last_played_at,
-        publish_date: game.publish_date })
+                  multiplayer: game.multiplayer,
+                  last_played_at: game.last_played_at,
+                  publish_date: game.publish_date })
     end
     File.write('./data/games.json', JSON.generate(data))
   end
