@@ -5,13 +5,14 @@ class MusicAlbum < Item
   attr_reader :publish_date, :id
 
   def initialize(publish_date, archived, on_spotify)
-     super(publish_date, archived:archived)
-     @id = Random.rand(1..10_1000)
+    super(publish_date)
+    @id = Random.rand(1..101_000)
     @on_spotify = on_spotify
+    @archived = archived
     @publish_date = publish_date
   end
 
   def can_be_archived?
-     super && @on_spotify
+    super && @on_spotify
   end
 end

@@ -4,7 +4,7 @@ require_relative '../classes/item'
 describe MusicAlbum do
   context 'when testing MusicAlbum class' do
     before(:each) do
-      @music_album = MusicAlbum.new('2020-07-11',true,true)
+      @music_album = MusicAlbum.new('2020-07-11', true, true)
     end
 
     it 'should check if instance of MusicAlbum is type of Item' do

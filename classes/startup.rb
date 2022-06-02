@@ -1,8 +1,10 @@
 require_relative 'game_actions'
+require_relative 'music_actions'
 
 class Startup
   def initialize
     @game_actions = GameActions.new
+    @music_actions = MusicActions.new
   end
 
   def options_list
@@ -36,7 +38,7 @@ class Startup
   end
 
   def musiclist
-    puts 'Music list in library'
+    @music_actions.list_musics
   end
 
   def gamelist
@@ -48,7 +50,7 @@ class Startup
   end
 
   def genrelist
-    puts 'Genres in library'
+    @game_actions.list_games
   end
 
   def authorlist
@@ -60,7 +62,7 @@ class Startup
   end
 
   def create_music
-    puts 'create music'
+    @music_actions.add_a_music
   end
 
   def create_game
@@ -70,6 +72,8 @@ class Startup
   def quite_app
     @game_actions.save_games
     @game_actions.save_authors
+    @music_actions.save_musics
+    @music_actions.save_genres
     puts 'Thanks for using our app'
     exit
   end
