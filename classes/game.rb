@@ -13,6 +13,6 @@ class Game < Item
   attr_reader :publish_date, :id
 
   def can_be_archived?
-    super && (@last_played.year < Date.today.year - 2)
+    super && (parse(@last_played_at).year < Date.today.year - 2)
   end
 end

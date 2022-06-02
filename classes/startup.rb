@@ -1,4 +1,4 @@
-require_relative 'game_actions'
+require_relative '../actions/game_actions'
 
 class Startup
   def initialize
