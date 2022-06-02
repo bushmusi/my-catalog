@@ -1,4 +1,4 @@
-require_relative './classes/book-store/label'
+require 'date'
 
 class Item
   attr_accessor :publish_date, :archived
@@ -38,7 +38,8 @@ class Item
   end
 
   def can_be_archived?
-    @publish_date.year < Date.today.year - 10
+    now = Time.now.year
+    years = now - publish_date.to_i > 10
   end
 
   def move_to_archive
