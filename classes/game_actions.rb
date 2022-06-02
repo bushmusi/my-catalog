@@ -68,7 +68,7 @@ class GameActions
     file = './data/games.json'
     if File.exist?(file)
       JSON.parse(File.read(file)).each do |game|
-        data.push(Game.new(game['last_played_at'], game['multiplayer'], game['publish_date']))
+        data.push(Game.new(game['multiplayer'], game['last_played_at'], game['publish_date']))
       end
     else
       File.write(file, [])
@@ -92,8 +92,10 @@ class GameActions
   def save_games
     data = []
     @games.each do |game|
-      data.push({ id: game.id, last_played_at: game.last_played_at, publish_date: game.publish_date,
-                  multiplayer: game.multiplayer })
+      data.push({ id: game.id,
+                  multiplayer: game.multiplayer,
+                  last_played_at: game.last_played_at,
+                  publish_date: game.publish_date })
     end
     File.write('./data/games.json', JSON.generate(data))
   end
