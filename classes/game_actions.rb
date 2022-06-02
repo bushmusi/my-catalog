@@ -56,7 +56,7 @@ class GameActions
       @authors.each do |author|
         puts "
           Author's id: #{author.id}
-          Author's name: #{author.first_name} 
+          Author's name: #{author.first_name}
           Author's lastname: #{author.last_name}
         "
       end
