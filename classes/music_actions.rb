@@ -57,6 +57,52 @@ class MusicActions
             "
           end
         end
-      end  
+      end 
+
+      def load_musics
+        data = []
+        file = './data/musics.json'
+        if File.exist?(file)
+          JSON.parse(File.read(file)).each do |music|
+            data.push(MusicAlbum.new( music['publish_date'], music['archived'],music['on_spotify']))
+          end
+        else
+          File.write(file, [])
+        end
+        data
+      end
+
+      def load_genres
+        data = []
+        file = './data/genres.json'
+        if File.exist?(file)
+          JSON.parse(File.read(file)).each do |genre|
+            data.push(Genre.new(genre['name']))
+          end
+        else
+          File.write(file, [])
+        end
+        data
+      end
+
+      def save_musics
+        data = []
+        @musics.each do |music|
+          data.push({ id: music.id,
+                     archived: music.archived,
+                      on_spotify: music.on_spotify,
+                      publish_date: music.publish_date })
+        end
+        File.write('./data/musics.json', JSON.generate(data))
+      end
+
+      def save_genres
+        data = []
+        @genres.each do |genre|
+          data.push({ id: genre.id,name: genre.name })
+        end
+        File.write('./data/genres.json', JSON.generate(data))
+      end
+
 end
 
