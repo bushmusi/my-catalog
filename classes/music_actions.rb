@@ -45,5 +45,18 @@ class MusicActions
           end
         end
       end
+    
+      def list_genres
+        if @genres.empty?
+          puts 'no genres available!'
+        else
+          @genres.each do |genre|
+            puts "
+              genre's id: #{genre.id}
+              genre's name: #{genre.name}
+            "
+          end
+        end
+      end  
 end
 
