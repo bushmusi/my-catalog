@@ -1,4 +1,4 @@
-require_relative 'game_actions'
+require './actions/game_actions'
 require_relative 'music_actions'
 
 class Startup
