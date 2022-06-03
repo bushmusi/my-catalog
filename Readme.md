@@ -22,9 +22,9 @@
 
 To get a local copy up and running follow these simple example steps.
 for SSH:
-`git clone git@github.com:saied2035/tdd-project.git`
+`git clone git@github.com:bushmusi/my-catalog.git`
 for https:
-`git clone https://github.com/saied2035/tdd-project.git`
+`git clone https://github.com/bushmusi/my-catalog.git`
 
 
 ## Authors
@@ -38,8 +38,8 @@ for https:
 👤 **Faith Usor**
 
 - GitHub: [@Faith](https://github.com/usorfaitheloho)
-- Twitter: [@Faither](https://twitter.com/Faither)
-- LinkedIn: [@Faither](https://www.linkedin.com/in/faither/)
+- Twitter: [@Faith](https://twitter.com/Faither)
+- LinkedIn: [@Faith](https://www.linkedin.com/in/faither/)
 
 👤 **Zahra Aershia**
 
@@ -51,7 +51,7 @@ for https:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/saied2035/tdd-project/issues).
+Feel free to check the [issues page](https://github.com/bushmusi/my-catalogue/issues).
 
 ## Show your support
 
