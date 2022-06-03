@@ -97,7 +97,7 @@ class GameActions
                   last_played_at: game.last_played_at,
                   publish_date: game.publish_date })
     end
-    File.write('./data/games.json', JSON.generate(data))
+    File.write('./data/games.json', JSON.pretty_generate(data))
   end
 
   def save_authors
@@ -105,6 +105,6 @@ class GameActions
     @authors.each do |author|
       data.push({ id: author.id, first_name: author.first_name, last_name: author.last_name })
     end
-    File.write('./data/authors.json', JSON.generate(data))
+    File.write('./data/authors.json', JSON.pretty_generate(data))
   end
 end
