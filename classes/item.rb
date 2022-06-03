@@ -39,9 +39,7 @@ class Item
   end
 
   def can_be_archived?
-    now = Date.today.year
-    published = @publish_date.to_i
-    (now - published) >= 10
+    @publish_date.to_i < Date.today.year - 10
   end
 
   def move_to_archive
