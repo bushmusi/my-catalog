@@ -1,1 +1,20 @@
-[{"id":9817,"multiplayer":"y","last_played_at":"2022-02-02","publish_date":"2020-02-02"},{"id":9678,"multiplayer":"y","last_played_at":"2022-03-12","publish_date":"2022-03-12"}]
+[
+  {
+    "id": 5595,
+    "multiplayer": "y",
+    "last_played_at": "2022-02-02",
+    "publish_date": "2020-02-02"
+  },
+  {
+    "id": 1628,
+    "multiplayer": "y",
+    "last_played_at": "2022-03-12",
+    "publish_date": "2022-03-12"
+  },
+  {
+    "id": 1620,
+    "multiplayer": "y",
+    "last_played_at": "2022-03-12",
+    "publish_date": "2022-03-12"
+  }
+]

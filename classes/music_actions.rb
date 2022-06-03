@@ -3,7 +3,7 @@ require './classes/genre'
 require 'json'
 
 class MusicActions
-  attr_accessor :music, :genres
+  attr_accessor :musics, :genres
 
   def initialize
     @musics = load_musics
@@ -11,7 +11,6 @@ class MusicActions
   end
 
   def add_a_music
-
     puts 'Publish date (yyyy-mm-dd): '
     publish_date = gets.chomp
 
@@ -21,7 +20,7 @@ class MusicActions
     puts 'Is it on spotify? [Y/N]: '
     on_spotify = gets.chomp.downcase
 
-    music = MusicAlbum.new(publish_date,archived, on_spotify)
+    music = MusicAlbum.new(publish_date, archived, on_spotify)
     @musics.push(music)
 
     puts 'what is the name of the genre: '
@@ -95,7 +94,7 @@ class MusicActions
                   on_spotify: music.on_spotify,
                   publish_date: music.publish_date })
     end
-    File.write('./data/musics.json', JSON.generate(data))
+    File.write('./data/musics.json', JSON.pretty_generate(data))
   end
 
   def save_genres
@@ -103,6 +102,6 @@ class MusicActions
     @genres.each do |genre|
       data.push({ id: genre.id, name: genre.name })
     end
-    File.write('./data/genres.json', JSON.generate(data))
+    File.write('./data/genres.json', JSON.pretty_generate(data))
   end
 end
