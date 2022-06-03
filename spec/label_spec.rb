@@ -2,11 +2,10 @@ require_relative '../classes/book-store/label'
 
 describe Label do
   before :each do
-    @label = Label.new('Yoga','Green')
+    @label = Label.new('Yoga', 'Green')
   end
-  
-  context 'check label property and method' do
 
+  context 'check label property and method' do
     it 'check if it is instance of label' do
       expect(@label).to be_instance_of Label
     end
@@ -20,4 +19,3 @@ describe Label do
     end
   end
 end
-
