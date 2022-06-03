@@ -4,6 +4,9 @@
 
 > In this project we have create a console app that will help you to keep a record of different types of things you won: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below. The data will be stored in JSON files but you will also prepare a database with tables structure analogical to your program's class structure.
 
+## introduction video
+[video](https://drive.google.com/file/d/1tOGPV8G9M4bUalBL4UB2ev7CvZCePZte/view?usp=sharing)
+
 ## Run tests
   - Run `gem install rspec`
   - Run `rspec` to check tests
