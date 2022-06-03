@@ -11,16 +11,17 @@ class MusicActions
   end
 
   def add_a_music
+
+    puts 'Publish date (yyyy-mm-dd): '
+    publish_date = gets.chomp
+
     puts 'Is it archived? [Y/N]: '
     archived = gets.chomp.downcase
 
     puts 'Is it on spotify? [Y/N]: '
     on_spotify = gets.chomp.downcase
 
-    puts 'Publish date (yyyy-mm-dd): '
-    publish_date = gets.chomp
-
-    music = MusicAlbum.new(archived, on_spotify, publish_date)
+    music = MusicAlbum.new(publish_date,archived, on_spotify)
     @musics.push(music)
 
     puts 'what is the name of the genre: '

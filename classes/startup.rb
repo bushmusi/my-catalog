@@ -50,7 +50,7 @@ class Startup
   end
 
   def genrelist
-    @game_actions.list_games
+    @music_actions.list_genres
   end
 
   def authorlist
