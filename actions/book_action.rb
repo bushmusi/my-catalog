@@ -1,7 +1,7 @@
-require_relative './book'
-require_relative './label'
-require_relative './file_manipulate'
-require_relative './hash_make'
+require_relative '../classes/book-store/book'
+require_relative '../classes/book-store/label'
+require_relative '../classes/book-store/file_manipulate'
+require_relative '../classes/book-store/hash_make'
 require 'json'
 
 class BookAction

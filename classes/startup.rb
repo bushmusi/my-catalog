@@ -1,6 +1,6 @@
 require './actions/game_actions'
-require './actions/music_actions'
-require_relative './book-store/book_action'
+require_relative '../actions/music_actions'
+require_relative '../actions/book_action'
 
 class Startup
   def initialize
