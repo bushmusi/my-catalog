@@ -1,8 +1,10 @@
 require_relative 'game_actions'
+require_relative './book-store/book_action'
 
 class Startup
   def initialize
     @game_actions = GameActions.new
+    @book_actions = BookAction.new
   end
 
   def options_list
@@ -32,7 +34,7 @@ class Startup
   end
 
   def booklist
-    puts 'book list in library'
+    @book_actions.list_books
   end
 
   def musiclist
@@ -44,7 +46,7 @@ class Startup
   end
 
   def lablelist
-    puts 'Labels in library'
+    @book_actions.list_labels
   end
 
   def genrelist
@@ -56,7 +58,7 @@ class Startup
   end
 
   def create_book
-    puts 'create book'
+    @book_actions.add_book
   end
 
   def create_music
@@ -70,6 +72,8 @@ class Startup
   def quite_app
     @game_actions.save_games
     @game_actions.save_authors
+    @book_actions.save_books
+    @book_actions.save_labels
     puts 'Thanks for using our app'
     exit
   end
