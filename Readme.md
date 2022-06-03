@@ -10,6 +10,7 @@
 ## Run tests
   - Run `gem install rspec`
   - Run `rspec` to check tests
+  - Run `rspec spec` to run all test files in spec folder
 
 ## Check ruby rentals
  - Run `gem install --no-document rubocop -v '>= 1.0, < 2.0'`
@@ -22,12 +23,25 @@
 - Ruby linters
 
 ## Getting Started
-
 To get a local copy up and running follow these simple example steps.
+
+**step1)** cloning the project:
+
 for SSH:
+
 `git clone git@github.com:bushmusi/my-catalog.git`
+
 for https:
+
 `git clone https://github.com/bushmusi/my-catalog.git`
+
+**step2)** go to the right folder:
+
+`cd my-catalog`
+
+**step3)** run the command:
+
+`ruby main.rb`
 
 
 ## Authors
