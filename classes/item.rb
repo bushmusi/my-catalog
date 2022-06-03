@@ -5,7 +5,7 @@ class Item
   attr_accessor :publish_date, :archived, :id
   attr_reader :author, :genre, :source, :label
 
-  def initialize(publish_date, archived: false)
+  def initialize(publish_date = Time.new.strftime('%Y-%m-%d'), archived: false)
     @id = Random.rand(1..10_000)
     @publish_date = publish_date
     @archived = archived
