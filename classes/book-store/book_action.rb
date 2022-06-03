@@ -21,8 +21,7 @@ class BookAction
     title = gets.chomp
     puts 'color: '
     color = gets.chomp
-    time = Time.new
-    book = Book.new(time.strftime('%Y-%m-%d'), publisher, cover_state)
+    book = Book.new(publisher, cover_state)
     label = Label.new(title, color)
     hash_label = to_hash(label)
     book.label_id = hash_label['id']
