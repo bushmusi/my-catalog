@@ -4,9 +4,13 @@
 
 > In this project we have create a console app that will help you to keep a record of different types of things you won: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below. The data will be stored in JSON files but you will also prepare a database with tables structure analogical to your program's class structure.
 
+## Introduction video
+[video](https://drive.google.com/file/d/1tOGPV8G9M4bUalBL4UB2ev7CvZCePZte/view?usp=sharing)
+
 ## Run tests
   - Run `gem install rspec`
   - Run `rspec` to check tests
+  - Run `rspec spec` to run all test files in spec folder
 
 ## Check ruby rentals
  - Run `gem install --no-document rubocop -v '>= 1.0, < 2.0'`
@@ -19,12 +23,25 @@
 - Ruby linters
 
 ## Getting Started
-
 To get a local copy up and running follow these simple example steps.
+
+**step1)** cloning the project:
+
 for SSH:
-`git clone git@github.com:saied2035/tdd-project.git`
+
+`git clone git@github.com:bushmusi/my-catalog.git`
+
 for https:
-`git clone https://github.com/saied2035/tdd-project.git`
+
+`git clone https://github.com/bushmusi/my-catalog.git`
+
+**step2)** go to the right folder:
+
+`cd my-catalog`
+
+**step3)** run the command:
+
+`ruby main.rb`
 
 
 ## Authors
@@ -38,8 +55,8 @@ for https:
 👤 **Faith Usor**
 
 - GitHub: [@Faith](https://github.com/usorfaitheloho)
-- Twitter: [@Faither](https://twitter.com/Faither)
-- LinkedIn: [@Faither](https://www.linkedin.com/in/faither/)
+- Twitter: [@Faith](https://twitter.com/Faither)
+- LinkedIn: [@Faith](https://www.linkedin.com/in/faither/)
 
 👤 **Zahra Aershia**
 
@@ -51,7 +68,7 @@ for https:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/saied2035/tdd-project/issues).
+Feel free to check the [issues page](https://github.com/bushmusi/my-catalogue/issues).
 
 ## Show your support
 
